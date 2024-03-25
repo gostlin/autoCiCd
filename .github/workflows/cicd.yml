@@ -25,11 +25,13 @@ concurrency:
 jobs:
   # 单次部署的工作描述
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    # environment:
+    #   name: github-pages
+    #   url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: outputs
+        run: echo ${{steps.deployment.outputs.page_url}}
       - name: Checkout
         uses: actions/checkout@v4
       - name: Cache node modules
