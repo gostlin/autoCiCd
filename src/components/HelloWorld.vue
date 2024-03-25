@@ -11,7 +11,7 @@ const count = ref(0);
 
 	<div class="card">
 		<button type="button" @click="count++">count is {{ count }}</button>
-		<p>成功了哈哈哈哈</p>
+		<p>改成ACTION形式部署</p>
 	</div>
 
 	<p>
