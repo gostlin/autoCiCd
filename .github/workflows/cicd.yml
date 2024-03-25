@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: outputs
-        run: echo ${{steps.deployment.outputs.page_url}}
+        run: echo ${{steps}}
       - name: Checkout
         uses: actions/checkout@v4
       - name: Cache node modules
